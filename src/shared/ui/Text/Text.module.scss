@@ -1,0 +1,113 @@
+.title {
+    color: var(--primary-color);
+}
+
+.text {
+    color: var(--secondary-color);
+}
+
+.error {
+    .title {
+        color: red;
+    }
+
+    .text {
+        color: red;
+    }
+}
+
+.left {
+    text-align: left;
+}
+
+.right {
+    text-align: right;
+}
+
+.center {
+    text-align: center;
+}
+
+.justify {
+    text-align: justify;
+}
+
+.size_s {
+    .title {
+        font-size: var(--font-size-m);
+    }
+
+    .text {
+        font-size: var(--font-size-s);
+    }
+}
+
+.size_m {
+    .title {
+        font-size: var(--font-size-l);
+    }
+
+    .text {
+        font-size: var(--font-size-m);
+    }
+}
+
+.size_l {
+    .title {
+        font: var(--font-xl);
+    }
+
+    .text {
+        font: var(--font-l);
+    }
+}
+
+.size_xl {
+    .title {
+        font: var(--font-xxl);
+    }
+
+    .text {
+        font: var(--font-xl);
+    }
+}
+
+.light {
+    .title {
+        font-weight: 200;
+    }
+
+    .text {
+        font-weight: 200;
+    }
+}
+
+.regular {
+    .title {
+        font-weight: 400;
+    }
+
+    .text {
+        font-weight: 400;
+    }
+}
+
+.medium {
+    .title {
+        font-weight: 500;
+    }
+
+    .text {
+        font-weight: 500;
+    }
+}
+
+.bold {
+    .title {
+        font-weight: 600;
+    }
+
+    .text {
+        font-weight: 600;
+    }
+}

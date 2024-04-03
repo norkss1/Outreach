@@ -1,0 +1,21 @@
+@import "reset";
+@import "./variables/global";
+
+#root {
+  font-family: var(--font-family-main);
+  width: 100%;
+}
+
+.app {
+  display: flex;
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  background: var(--bg-color);
+}
+
+.content-page {
+  margin: 0 auto;
+  padding: 0;
+  min-width: 1200px;
+}

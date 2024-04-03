@@ -1,0 +1,27 @@
+.Button {
+    cursor: pointer;
+    padding: 10px 20px;
+    border: none;
+    outline: none;
+    border-radius: 3px;
+    min-height: 30px;
+    font-weight: 500;
+    transition: 0.3s linear;
+}
+
+.primary {
+    background-color: var(--light-green-color);
+    color: var(--white-color);
+}
+
+.clear {
+    background: none;
+    color: transparent;
+    border: none;
+    padding: 0;
+    outline: none;
+}
+
+.size_m {
+    font-size: var(--font-size-m);
+}

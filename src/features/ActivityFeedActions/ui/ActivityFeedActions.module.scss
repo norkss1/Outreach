@@ -1,0 +1,41 @@
+.ActivityFeedActions {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  z-index: 1000;
+
+  .action {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 1px solid var(--middle-gray-color);
+    background-color: var(--white-color);
+    cursor: pointer;
+    transition: .3s linear background-color;
+
+    svg {
+      width: 16px;
+      height: 16px;
+      fill: var(--gray-color);
+    }
+
+    &:hover {
+      background-color: var(--light-green-color);
+
+      svg {
+        fill: var(--white-color);
+      }
+    }
+
+    &.active {
+      background-color: var(--light-blue-color);
+
+      svg {
+        fill: var(--white-color);
+      }
+    }
+  }
+}

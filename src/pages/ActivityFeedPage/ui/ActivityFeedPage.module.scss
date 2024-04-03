@@ -1,0 +1,51 @@
+.ActivityFeedPageWrapper {
+  .header {
+    width: 100vw;
+
+    @media (max-width: 1200px) {
+      width: 100%;
+    }
+
+    .headerBody {
+      position: relative;
+      height: 200px;
+      background-color: var(--purple-color);
+
+      svg {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: 250px;
+        fill: var(--white-color);
+      }
+    }
+
+    .headerWaves {
+      overflow-x: hidden;
+      width: 100vw;
+
+      @media (max-width: 1200px) {
+        margin-top: -2px;
+        width: 100%;
+      }
+    }
+
+    svg {
+      width: 150%;
+      height: 120px;
+      fill: var(--purple-color);
+    }
+  }
+
+  .ActivityFeedPage {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+
+    .ListTitle {
+      margin-top: 30px;
+    }
+  }
+}
+

@@ -1,0 +1,28 @@
+.InputWrapper {
+    position: relative;
+    display: flex;
+    max-height: 60px;
+
+    &:focus {
+        outline: none;
+    }
+
+    .input {
+        width: 100%;
+        min-height: 40px;
+        border: 1px solid var(--gray-color);
+        background-color: var(--white-color);
+        outline: transparent none;
+        font-size: var(--font-size-m);
+        line-height: var(--font-line-m);
+        transition: 0.3s linear border;
+
+        &:hover {
+            border: 1px solid var(--light-green-color);
+        }
+
+        &:focus {
+            border: 1px solid var(--light-green-color);
+        }
+    }
+}

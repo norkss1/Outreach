@@ -1,0 +1,46 @@
+.LineIconStatus {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    border: 2px solid var(--light-gray-color);
+    background-color: var(--white-color);
+
+    svg {
+        width: 14px;
+        height: 14px;
+        fill: var(--gray-color);
+    }
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: -50px;
+        left: 50%;
+        width: 2px;
+        height: 50px;
+        background-color: var(--light-gray-color);
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        top: 32px;
+        left: 50%;
+        width: 2px;
+        height: 40px;
+        background-color: var(--light-gray-color);
+    }
+
+    &.long::before {
+        top: -70px;
+        height: 70px;
+    }
+
+    &.long::after {
+        height: 80px;
+    }
+}

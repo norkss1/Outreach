@@ -1,0 +1,77 @@
+.Wrapper {
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    opacity: 0;
+    transition: .2s linear opacity;
+
+    .selectBtn {
+        position: relative;
+        width: 20px;
+        height: 20px;
+        border: none;
+        border-radius: 50%;
+        background-color: var(--light-blue-color);
+        cursor: pointer;
+        transition: .3s linear background-color;
+
+        svg {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 12px;
+            height: 12px;
+            fill: var(--white-color);
+        }
+
+        &:hover {
+            background-color: var(--white-color);
+
+            svg {
+                fill: var(--light-blue-color);
+            }
+        }
+    }
+
+    .optionsList {
+        display: none;
+        position: absolute;
+        top: 25px;
+        left: 0;
+        transform: translateX(-50%);
+        width: 80px;
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+        border: 2px solid var(--light-gray-color);
+        border-radius: 5px;
+        background-color: var(--white-color);
+        overflow: hidden;
+        z-index: var(--overlay-z-index);
+    }
+
+    .optionsListVisible {
+        display: block;
+    }
+
+    .option {
+        width: 100px;
+        border: transparent;
+        font-size: var(--font-size-m);
+        font-weight: 600;
+        margin: 0;
+        padding: 10px;
+        cursor: pointer;
+        transition: 0.3s linear;
+        transition-property: background-color, color;
+        color: var(--black-color);
+    }
+
+    .option:hover {
+        color: var(--white-color);
+        background-color: var(--light-blue-color);
+    }
+}

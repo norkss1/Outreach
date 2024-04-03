@@ -1,6 +1,9 @@
 import {
-    memo, useMemo, useRef, useState,
+    memo,
+    useMemo,
+    useRef
 } from 'react';
+import { useHover } from "src/shared/lib/hooks/useHover/useHover";
 import { ArrowDownIcon } from 'src/shared/assets/icons/ArrowDownIcon';
 import { classNames, Mods } from 'src/shared/lib/classNames/classNames';
 import cls from './Select.module.scss';
@@ -23,16 +26,11 @@ export const Select = memo((props: SelectProps) => {
         options,
     } = props;
 
-    const [isOptionsVisible, setOptionsIsVisible] = useState(false);
+    const [isHover, bindHover] = useHover();
     const selectBtnRef = useRef<HTMLButtonElement>(null);
 
-    const openSelectHandler = () => {
-        setOptionsIsVisible(!isOptionsVisible);
-    };
-
-
     const mods: Mods = {
-        [cls.optionsListVisible]: isOptionsVisible,
+        [cls.optionsListVisible]: isHover,
     };
 
     const optionsList = useMemo(() => options?.map(
@@ -48,13 +46,12 @@ export const Select = memo((props: SelectProps) => {
     ), [onOptionClick, options]);
 
     return (
-        <div className={classNames(cls.Wrapper, {}, [className])}>
+        <div {...bindHover} className={classNames(cls.Wrapper, {}, [className])}>
             <button
                 data-testid={'select-btn'}
                 type="button"
                 ref={selectBtnRef}
                 className={cls.selectBtn}
-                onClick={openSelectHandler}
             >
                 <ArrowDownIcon />
             </button>
